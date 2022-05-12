@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4 user-details">
+            <div class="row profile-pic"><img src="assets/profile.png"></div>
+            <div class="row text-center"><p class="author-name">{{user.name}}</p></div>
+            <div class="row text-center "><p class="proff-loc">{{user.profession}} | <i class="fa fa-map-marker" aria-hidden="true"></i> {{user.location}}</p></div>
+            <div class="row" style="margin: 0px auto;">
+                <div class="bio">
+                    <p style="padding: 10px; margin: 0px;">{{user.about}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+        <div class="col-7 user-posts">
+            <div class="row post-sec">
+                <h4 style="font-weight: bold; margin-left: 10px; margin-top: 5px;">Posts</h4>
+            </div>
+            <div class="row mx-auto mb-3 blog-tile" *ngFor="let p of user.posts" >
+                <div class="col">
+                    <div class="row title mx-2" > {{p.post_title}} </div>
+                    <div class="row date mx-2 mt-1">{{p.created_on | date}}</div>
+                    <div class="row content mx-2 mb-4 mt-3"><p style="margin: 0; padding: 0;">{{p.post_content | slice: 0:200}}
+                         <span class="read-more" (click)=routeToDetails(p.post_id)>Read More</span></p> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

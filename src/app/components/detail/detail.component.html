@@ -1,0 +1,39 @@
+<div class="container mt-5 mb-5">
+    
+        <div class="row mx-auto mb-3 blog-tile" >
+            <div class="col">
+                <div class="row title mx-2" > {{post.post_title}} </div>
+                <div class="row author mx-2"><p style="margin: 0px; padding: 0px;"><span (click)="navToProfile(post.author_id)" style="cursor: pointer; margin: 0px;">{{post.author_name}} </span>| <span id="date">{{post.created_on | date}}</span></p></div>
+                <div class="row content mx-2 mb-4 mt-3"><p style="margin: 0; padding: 0;">{{post.post_content}} 
+                </p> </div>
+                <div class="row mx-2 mb-4">
+                    <p style="margin: 0; padding: 0;">
+                        <span class="fa fa-heart-o like" type="button" *ngIf="!post.isLiked" (click)=toggleLike()></span>
+                        <span class="fa fa-heart red like" type="button" *ngIf="post.isLiked" (click)=toggleLike()></span>
+                        &nbsp; <span style="font-size: 13px; font-family: 'Poppins'; font-weight: 500;" id="likes"> {{post.likes}} Likes</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+    
+
+    <!-- comment -->
+
+    <div class="row comment-sec mx-auto">
+        <div class="col">
+            <div class="row comment-header">Comments</div>
+            <div class="row comments-text" class="comments" *ngFor="let c of post.comments">{{c}}</div>
+            <form>
+            <div class="row comment-input">
+                <div class="input-group mb-3">
+                    <input type="text" #comment class="form-control" id="comment" placeholder="Write a comment..." style="border-radius: 20px;">
+                    <div class="input-group-append">
+                      <span class="fa fa-paper-plane fa-lg mx-2 mt-2" type="button" id="send-button"  style="color: rgb(0, 104, 165);" (click)="postComment(comment.value)"></span>
+                    </div>
+                  </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

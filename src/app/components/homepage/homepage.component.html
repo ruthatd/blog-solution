@@ -1,0 +1,13 @@
+
+
+<div class="container mt-5">
+    <div class="row mx-auto mb-3 blog-tile" *ngFor="let p of posts" >
+        <div class="col">
+            <div class="row title mx-2" > {{p.post_title}} </div>
+            <div class="row author mx-2"><p style="margin: 0px; padding: 0px;">By : <span routerLink="profile/{{p.author_id}}" style="cursor: pointer; margin: 0px;">{{p.author_name}}</span></p></div>
+            <div class="row date mx-2 mt-1">{{p.created_on | date}}</div>
+            <div class="row content mx-2 mb-4 mt-3"><p style="margin: 0; padding: 0;">{{p.post_content | slice: 0:200}}.... 
+                 <span class="read-more" (click)=routeToDetails(p.post_id)>Read More</span></p> </div>
+        </div>
+    </div>
+</div>

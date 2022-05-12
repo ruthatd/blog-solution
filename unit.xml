@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 98.0.4758.102 (Windows 10)" package="unit" timestamp="2022-02-24T17:55:24" id="0" hostname="DESKTOP-O6B0M24" tests="2" errors="0" failures="1" time="0.164">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/98.0.4758.102 Safari/537.36"/>
+  </properties>
+  <testcase name="AppComponent Display Posts on Home Page" time="0.129" classname=".AppComponent"/>
+  <testcase name="AppComponent Display correct date format on Detail Page" time="0.035" classname=".AppComponent">
+    <failure type="">TypeError: Cannot read properties of undefined (reading 'post_title')
+    at DetailComponent_Template (ng:///DetailComponent.js:123:48)
+    at executeTemplate (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:9618:1)
+    at refreshView (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:9484:1)
+    at refreshComponent (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:10655:1)
+    at refreshChildComponents (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:9280:1)
+    at refreshView (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:9534:1)
+    at renderComponentOrTemplate (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:9598:1)
+    at tickRootContext (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:10829:1)
+    at detectChangesInRootView (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:10854:1)
+    at RootViewRef.detectChanges (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:22874:1)
+</failure>
+  </testcase>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

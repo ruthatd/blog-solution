@@ -1,0 +1,62 @@
+.blog-tile{
+    border: 1px solid #ebebeb; 
+    border-radius: 10px;
+    width: 60%;
+    /* cursor: pointer; */
+}
+.title{
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 24px;
+}
+.author{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 18px;
+    color: #8f8f8f;
+}
+
+
+
+.content{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 13px;
+    color: #000000;
+}
+
+.read-more{
+    color: #004094;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.red{
+    color: rgb(206, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+/* comment section */
+
+.comment-sec{
+    border: 1px solid #ebebeb;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.comment-header{
+    padding-left: 10px;
+    border: 1px solid #ebebeb;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #efefef;
+    font-weight: 500;
+}
+
+.comments-text{
+    padding: 10px 0px 10px 10px;
+    border: 1px solid #ebebeb;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
